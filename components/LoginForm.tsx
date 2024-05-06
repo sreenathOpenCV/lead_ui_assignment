@@ -19,10 +19,8 @@ const LoginForm = ({ onLoginSuccess }: LoginFormProps) => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // const result = await signIn('credentials', { username, password });
         if (username === 'admin' && password === 'admin123') {
-            // Perform login logic
-            onLoginSuccess(); // Call onLoginSuccess callback upon successful login
+            onLoginSuccess();
           } else {
             console.error('Invalid username or password');
           }

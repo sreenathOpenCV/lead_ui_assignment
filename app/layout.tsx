@@ -17,9 +17,8 @@ const karla = Karla({
 });
 
 export default function RootLayout({ children }: any) {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
-  // Function to handle successful login
   const handleLoginSuccess = () => {
     setIsLoggedIn(true);
   };
@@ -29,9 +28,9 @@ export default function RootLayout({ children }: any) {
       <ReduxProvider>
         <body className={karla.className}>
           <div className=''>
-            {!isLoggedIn ? ( // Render login page if not logged in
+            {!isLoggedIn ? (
               <LoginForm onLoginSuccess={handleLoginSuccess} />
-            ) : ( // Render main content if logged in
+            ) : (
               <div className="flex flex-col h-full w-full">
                 <SideBar />
                 <Header />
