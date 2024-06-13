@@ -45,7 +45,7 @@ export function UserNav() {
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                    <Link href="" onClick={handleLogout}>Log out</Link>
+                    <Link href='/api/auth/signout'>Logout</Link>
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>

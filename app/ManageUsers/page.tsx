@@ -19,7 +19,7 @@ const ManageUsers = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between max-sm:flex-col mt-3 mb-4">
+      <div className="flex items-center justify-between max-sm:flex-col my-4">
       <div className="px-3 text-sm max-sm:text-sm max-sm:mt-2 max-sm:-ml-8">Dashboard/ManageUsers</div>
       <h1 className="text-black text-3xl font-bold">ManageUsers</h1> 
       <div></div>

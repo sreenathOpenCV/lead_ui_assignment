@@ -1,7 +1,7 @@
-import { SideNavItemGroup } from "@/types/type";
-import { BsEnvelope, BsGear, BsHouseDoor, BsKanban, BsListUl, BsQuestionCircle } from "react-icons/bs";
+import { VscGraphLine } from "react-icons/vsc";
 import { SiGooglesheets } from "react-icons/si";
 import { SiFiles } from "react-icons/si";
+import { SideNavItemGroup } from "../types/type";
 
 
 export const SIDENAV_ITEMS: SideNavItemGroup[] = [
@@ -43,12 +43,21 @@ export const SIDENAV_ITEMS: SideNavItemGroup[] = [
                 //     {title: "Webinar Live Attended", path: "webinar_live_attended"}
                 // ],
             },
-
-            // {
-            //     title: 'Feedbacks',
-            //     path: '/feedbacks',
-            //     icon: <BsEnvelope size={20} />,
-            // }
+            {
+                title: 'Utm Tracker',
+                path: '/LineChart',
+                icon: <VscGraphLine fontSize="1.4rem"/>,
+            },
+            {
+                title: 'MSG',
+                path: '/webinar_notifications',
+                icon: <VscGraphLine fontSize="1.4rem"/>,
+                submenu: true,
+                subMenuItems: [
+                    {title: "Sales Campaign", path: "/sales_campaign"},
+                    {title: "Webinar Natifications", path: "/webinar_notifications"},
+                ],
+            }
         ]
     },
     // {

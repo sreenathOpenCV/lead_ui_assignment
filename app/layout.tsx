@@ -8,7 +8,8 @@ import PageWrapper from '../components/pagewrapper';
 import { SideBar } from '../components/sidebar';
 import Header from '../components/header';
 import Footer from '../components/Footer';
-import LoginForm from '../components/LoginForm'; // Import the LoginForm component
+import LoginForm from '../components/LoginForm';
+import AuthProvider from "./context/AuthProvider";
 
 const karla = Karla({
   weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -17,28 +18,19 @@ const karla = Karla({
 });
 
 export default function RootLayout({ children }: any) {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); 
-
-  const handleLoginSuccess = () => {
-    setIsLoggedIn(true);
-  };
 
   return (
     <html lang="en" suppressHydrationWarning>
       <ReduxProvider>
         <body className={karla.className}>
-          <div className=''>
-            {!isLoggedIn ? (
-              <LoginForm onLoginSuccess={handleLoginSuccess} />
-            ) : (
+              <AuthProvider>
               <div className="flex flex-col h-full w-full">
-                <SideBar />
-                <Header />
+                {/* <SideBar />
+                <Header /> */}
                 <PageWrapper children={children} />
-                <Footer />
+                {/* <Footer /> */}
               </div>
-            )}
-          </div>
+              </AuthProvider>
         </body>
       </ReduxProvider>
     </html>

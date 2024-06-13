@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-// import { signIn, useSession } from "next-auth/react";
+import { useState } from "react";
+import { signIn } from 'next-auth/react';
 
 const LoginForm = () => {
     const [username, setUsername] = useState('');
@@ -15,19 +15,17 @@ const LoginForm = () => {
   
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-
-        // signIn('credentials', {
-        //   username: "admin",
-        //   password: "admin123",
-        //   callbackUrl: '/ManageUsers'
-        // });
-
+        signIn('credentials', {
+          username: "admin",
+          password: "admin123",
+          callbackUrl: '/ManageUsers'
+        });
     };
     
     return (
         <div className="flex flex-col md:flex-row h-screen">
             <div className="flex-1 flex justify-center items-center bg-cover"
-                style={{ backgroundImage: "url('./LoginBackground1.png')" }}>
+                style={{ backgroundImage: "url('./LoginBackground.png')" }}>
                 <div className="w-full h-full md:hidden bg-black bg-opacity-50 flex justify-center items-center">
                     {/* Form container for small screens */}    
                     <form method="POST" onSubmit={handleSubmit} className="w-full max-w-md p-4 bg-white rounded-3xl m-4 p-8">

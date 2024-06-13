@@ -25,7 +25,7 @@ export const SideBarMenuItem = ({ item }: { item: SideNavItem }) => {
 
     const activeLink = classNames("text-sidebar-muted-foreground bg-[#138DFF]");
 
-    const navMenuDropdownItem = "py-2 hover:text-sidebar-muted-foreground transition duration-200 p-2";
+    const navMenuDropdownItem = "py-2 text-sidebar-muted-foreground transition duration-200 p-2";
 
     const dropdownMenuHeaderLink = classNames(inactiveLink, { ["bg-sidebar-muted"]: subMenuOpen });
 
@@ -48,7 +48,7 @@ export const SideBarMenuItem = ({ item }: { item: SideNavItem }) => {
                             {item.subMenuItems?.map((subItem, idx) => (
                                 <Link
                                     key={idx}
-                                    href="/ManageUsersSheet"
+                                    href={subItem.path}
                                     className={navMenuDropdownItem}
                                 >
                                     <span>{subItem.title}</span>

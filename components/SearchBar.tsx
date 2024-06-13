@@ -49,7 +49,7 @@ export default function SearchBar({handleSubmitData, path}: {handleSubmitData: (
 
   return (
     <>
-      <div className="flex items-center justify-between max-sm:flex-col -mt-1">
+      <div className="flex items-center justify-between max-sm:flex-col">
       <div className="px-3 text-sm max-sm:text-sm max-sm:mt-2 max-sm:-ml-8">Dashboard/ManageSheets/{lastSelectedSheet ? <span className="text-red-500">{lastSelectedSheet.name}</span> : ''}</div>
       <h1>{lastSelectedSheet ? <span className="text-black text-3xl font-bold">{lastSelectedSheet.name}</span> : ''}</h1>
         <Autocomplete

@@ -96,7 +96,7 @@ const TableUI = ({
  
   return (
     <>
-      <div className="p-3 bg-white rounded-lg shadow-2xl">
+      <div className="p-3 bg-white rounded-lg shadow-2xl h-screen">
         <div className="rounded-lg shadow hidden md:block bg-white">
         <table className="w-full overflow-y-scroll ">
             <thead className="sticky border-b-2 border-gray-200 bg-gray-700 text-white rounded-t-lg">
